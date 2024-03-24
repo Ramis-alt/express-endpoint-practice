@@ -46,7 +46,7 @@ app.use(async function(req, res, next) {
 app.use(cors());
 
 app.use(express.json());
-
+//car-5 is only the name of my endpoint, it can be anything, but it has to be unique
 app.get('/cars-5', async function(req, res) {
   try {
     // console.log('hello world')
@@ -132,7 +132,7 @@ app.delete('/car/:id', async function (req, res) {
 //PUT will modify an existing part of our database, in this case, where replacing car/2 with a different key
 //value pair info
 app.put('/car/:id', async function (req, res) { //in this line, where replacing car/:id in insomnia with
-  //car/1, or whichever id we wenat to modify
+  //car/1, or whichever id we want to modify
 
   try {
       const id = parseInt(req.params.id); //this line of code parses through the string and converts it to an integer
